@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="../build/css/style.css">
 </head>
 <body>
-    <div class="bgimg-1">
+    <div class="fucking-pos">
         <div class="caption">
-            <span class="border">
+            <span class="border-report">
             <?php
                 echo '<a href="/index.php">' . $pageData['title'] . '</a>'; 
             ?></span>
@@ -34,6 +34,6 @@
                 <input class="input1" type="submit" value="START">
             </form>
         </div>
-    </div>
+        </div>
 </body>
 </html>

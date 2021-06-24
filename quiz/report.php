@@ -9,7 +9,7 @@
     $_SESSION["quiz-ckue-results"] = array();
     // Get quiz data
     $quizData = quizData();
-    echo $quizData;
+
     $pageData = $quizData['report'];
     // Session object: Update number of achieved points
     // var_dump($_POST);
@@ -22,15 +22,14 @@
     <link rel="stylesheet" href="../build/css/style.css">
 </head>
 <body>
-    <div class="bgimg-1">
-        <div class="caption">
-            <span class="border">
+        <div class="report-container">
+            <span class="border-report">
             <?php
-                echo '<a class="feedback" href="/index.php">' . $pageData['title'] . '</a>';
-                echo '<p class="feedback">' . $pageData['feedback_60'] . '</p>';
+                echo '<p class="feedback" href="/index.php">' . $pageData['title'] . '</p>';
+                ?> <br>
+                <?php
                 echo '<p class="feedback2">You have answered ' . $_SESSION['achievedPoints'] . ' question(s) correctly.</p>';
             ?></span>
         </div>
-    </div>
 </body>
 </html>

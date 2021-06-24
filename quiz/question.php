@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="../build/css/style.css">
 </head>
 <body>
-    <div class="bgimg-1">
+    <div class="container">
         <div class="caption">
             <span class="border">
             <?php
@@ -39,19 +39,23 @@
             ?>
             </span>
             <div id="form">
-            <form action="<?php echo $pageData['nextAction']; ?>" method="post">
-                <input type="radio" id="answer0" name="radio" 
+            <form action="<?php echo $pageData['nextAction']; ?>" method="post" class="form-style">
+            <center>
+            <div class="question-container">
+                <input class="radio-button" type="radio" id="answer0" name="radio" 
                     value="<?php echo $pageData['answers'][0][1]; ?>">
                 <label for="answer0"><?php echo $pageData['answers'][0][0]; ?></label><br>
-                <input type="radio" id="answer1" name="radio" 
+                <input class="radio-button" type="radio" id="answer1" name="radio" 
                     value="<?php echo $pageData['answers'][1][1]; ?>">
                 <label for="answer1"><?php echo $pageData['answers'][1][0]; ?></label><br>
-                <input type="radio" id="answer2" name="radio" 
+                <input class="radio-button" type="radio" id="answer2" name="radio" 
                     value="<?php echo $pageData['answers'][2][1]; ?>">
                 <label for="answer2"><?php echo $pageData['answers'][2][0]; ?></label><br><br>
                 <input type="hidden" name="questionID" 
                        value="<?php echo $pageData['questionID']; ?>">
-                <input type="submit" value="NEXT">
+            </div>
+        </center>
+                <input class="next-btn" type="submit" value="Next Question">
             </form>
             </div>
         </div>

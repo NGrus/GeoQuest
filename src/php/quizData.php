@@ -10,7 +10,7 @@ function quizData() {
 
 function quizIntroData() {
     return array(
-        'title' => "Rivers",
+        'title' => "Start your Game!",
         'description' => "You'll do fine",
         'imageURL' => "/images/bild.jpg",
         'nextAction' => 'question.php',
@@ -35,12 +35,15 @@ function quizQuestionData() {
         'franco0' => francoq0(),
         'franco1' => francoq1(),
         'franco2' => francoq2(),
+        'gonzalo1' => gonzaloq1(),
+        'gonzalo2' => gonzaloq2(),
+        'gonzalo3' => gonzaloq3()
       );
 }
 
 function francoq0(){
   return array(
-    'text' => "What is the name of the capital of Iceland",
+    'text' => "What is the name of the capital of Iceland?",
     'answers' => array(
         array("Reykjavik", 1),
         array("Amsterdam", 0),
@@ -70,13 +73,14 @@ function francoq2(){
         array("Turin", 0),
         array("Rome", 1)
     ),
-    'nextAction' => 'report.php',
+    'nextAction' => 'question.php',
+    'questionID' => 'gonzalo1'
 );
 }
 
 function nicoQ0() {
     return array(
-        'text' => "in which country do the tigris and euphrates rivers meet?",
+        'text' => "In which country do the Tigris and Euphrates rivers meet?",
         'answers' => array(
             array("Turkey", 0),
             array("Israel", 0),
@@ -89,7 +93,7 @@ function nicoQ0() {
 
 function nicoQ1() {
     return array(
-        'text' => "how many countries does the Rhine river pass through?",
+        'text' => "How many countries does the Rhine river pass through?",
         'answers' => array(
             array(4, 0),
             array(6, 1),
@@ -102,7 +106,7 @@ function nicoQ1() {
 
 function nicoQ2(){
   return array(
-    'text' => 'Which is the largest river that passes through china?',
+    'text' => 'Which is the largest river that passes through China?',
     'answers' => array(
       array('The Mekong River', 0),
       array('The Yangtze River', 1),
@@ -112,6 +116,44 @@ function nicoQ2(){
     'questionID' => 'franco0'
   );
 }
+
+function gonzaloQ1() {
+    return array(
+        'text' => "What is the most famous Mountain in Japan?",
+        'answers' => array(
+            array("Kitadake", 0),
+            array("Fuji", 1),
+            array("Ontake", 0)
+        ),
+        'nextAction' => 'question.php',
+        'questionID' => 'gonzalo2'
+    );
+}
+
+function gonzaloQ2(){
+  return array(
+    'text' => 'What is the tallest mountain in the world?',
+    'answers' => array(
+      array('Huascaran', 0),
+      array('Everest', 1),
+      array('Matterhorn', 0)
+    ),
+    'nextAction' => 'question.php',
+    'questionID' => 'gonzalo3'
+  );
+}
+
+function gonzaloQ3(){
+    return array(
+      'text' => 'Where is the mountain K2 located?',
+      'answers' => array(
+        array('Philipines', 0),
+        array('China', 1),
+        array('Argentina', 0)
+      ),
+      'nextAction' => 'report.php',
+    );
+  }
 
 function reportData() {
     return array(
